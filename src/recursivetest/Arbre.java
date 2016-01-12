@@ -46,7 +46,7 @@ public class Arbre {
         String Resultat;
         String G,r,D;
         if (gauche==null){
-            G = "";
+            G = "¤";
         }
         else {
             
@@ -62,7 +62,7 @@ public class Arbre {
         
         
         if (droite==null){
-            D = "";
+            D = "¤";
         }
         else {
 
