@@ -41,6 +41,61 @@ public class Arbre {
         this.droite = droite;
     }
     
+    //affiche a partir de l'arbre actuelle
+    public String structureArbre(){
+        String Resultat;
+        String G,r,D;
+        if (gauche==null){
+            G = "";
+        }
+        else {
+            
+            G = gauche.structureArbre();
+        }
+        
+        if (valeur==-9999){
+            r = "r";
+        }
+        else {
+            r = Integer.toString(valeur);
+        }
+        
+        
+        if (droite==null){
+            D = "";
+        }
+        else {
+
+            D = droite.structureArbre();
+        }
+
+         Resultat = "/" + G + "," + r + "," + D + "\\";
+        return Resultat;
+  
+    }
+    
+    public void afficherNoeud(){
+        String G,r,D;
+        if (gauche==null){
+            G = " ";
+        }
+        else {
+            G = Integer.toString(gauche.valeur);
+        }
+        if (droite==null){
+            D = " ";
+        }
+        else {
+            D = Integer.toString(droite.valeur);
+        }
+        if (valeur==-9999){
+            r = "r";
+        }
+        else {
+            r = Integer.toString(valeur);
+        }
+        System.out.print("/" + G + "," + r + "," + D + "\\");
+    }
    
     
 }

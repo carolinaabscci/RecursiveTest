@@ -21,14 +21,19 @@ public class TestAlgo {
         Arbre t2 = new Arbre(12,new Arbre(4),new Arbre(3));
         Arbre tree = new Arbre(5,new Arbre(8),t2);
         
+        System.out.println("Racine :" + tree.valeur);
+        
         //affichage sous forme infixe
         System.out.println("Arbre par résolution infixe");
         FctsArbre.afficherArbre(tree, FctsArbre.parcours.infixe);
         System.out.println();
+        
+        System.out.println("Structure de l'arbre avec codage du cours");
+        System.out.println(tree.structureArbre());
         System.out.println();
         
         //test algo  exercice 7.15
-        System.out.println("Algo exercice 7.15 (avec x = 3");
+        System.out.println("Algo exercice 7.15 (avec x = 3)");
         TestAlgo test = new TestAlgo();
 
         System.out.println(test.lesAsc(tree, 3));
